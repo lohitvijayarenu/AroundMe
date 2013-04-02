@@ -9,6 +9,8 @@
 #import "TweetsAroundMeViewController.h"
 #import "TweetsAroundMe.h"
 #import "TweetsAroundMeViewCell.h"
+#import "GetCurrentLocation.h"
+#import "WOEIDUtil.h"
 
 @interface TweetsAroundMeViewController ()
 @property (strong, nonatomic) NSArray *tweets;
@@ -48,7 +50,7 @@
 
 - (NSArray *) tweets
 {
-    NSString *location = @"37.781157,-122.398720,1mi";
+    NSString *location = [GetCurrentLocation getCurrentLocation];
     if (!_tweets) _tweets = [self.tweetsAroundMe fetchTweets:location];
     return _tweets;
 }
@@ -56,7 +58,7 @@
 // Fetch tweets from tweetsAroundMe and populate tweets
 - (void) fetchTweets
 {
-    NSString *location = @"37.781157,-122.398720,1mi";
+    NSString *location = [GetCurrentLocation getCurrentLocation];
     self.tweets = [self.tweetsAroundMe fetchTweets:location];
 }
 

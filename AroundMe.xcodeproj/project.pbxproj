@@ -22,6 +22,14 @@
 		402790A5170ABD110090C64E /* TweetsAroundMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790A4170ABD110090C64E /* TweetsAroundMe.m */; };
 		402790A7170ABEA60090C64E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402790A6170ABEA60090C64E /* Accounts.framework */; };
 		402790A9170ABEBE0090C64E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402790A8170ABEBE0090C64E /* Social.framework */; };
+		402790E0170B2C1B0090C64E /* twitter-bird-light-bgs.png in Resources */ = {isa = PBXBuildFile; fileRef = 402790DF170B2C1B0090C64E /* twitter-bird-light-bgs.png */; };
+		402790E2170B2CB10090C64E /* twitter-bird-dark-bgs.png in Resources */ = {isa = PBXBuildFile; fileRef = 402790E1170B2CB10090C64E /* twitter-bird-dark-bgs.png */; };
+		402790E4170B2CB70090C64E /* twitter-bird-blue-on-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 402790E3170B2CB70090C64E /* twitter-bird-blue-on-white.png */; };
+		402790E6170B2CBE0090C64E /* twitter-bird-white-on-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 402790E5170B2CBE0090C64E /* twitter-bird-white-on-blue.png */; };
+		402790E8170B2F550090C64E /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 402790E7170B2F550090C64E /* download.jpeg */; };
+		402790EA170B30500090C64E /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 402790E9170B30500090C64E /* images.jpeg */; };
+		402790ED170B30E20090C64E /* GetCurrentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790EC170B30E20090C64E /* GetCurrentLocation.m */; };
+		402790F0170B35D50090C64E /* WOEIDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790EF170B35D40090C64E /* WOEIDUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +55,16 @@
 		402790A4170ABD110090C64E /* TweetsAroundMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsAroundMe.m; sourceTree = "<group>"; };
 		402790A6170ABEA60090C64E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		402790A8170ABEBE0090C64E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		402790DF170B2C1B0090C64E /* twitter-bird-light-bgs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-bird-light-bgs.png"; path = "../../../Downloads/twitter-bird-light-bgs.png"; sourceTree = "<group>"; };
+		402790E1170B2CB10090C64E /* twitter-bird-dark-bgs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-bird-dark-bgs.png"; path = "../../../Downloads/twitter-bird-dark-bgs.png"; sourceTree = "<group>"; };
+		402790E3170B2CB70090C64E /* twitter-bird-blue-on-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-bird-blue-on-white.png"; path = "../../../Downloads/twitter-bird-blue-on-white.png"; sourceTree = "<group>"; };
+		402790E5170B2CBE0090C64E /* twitter-bird-white-on-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-bird-white-on-blue.png"; path = "../../../Downloads/twitter-bird-white-on-blue.png"; sourceTree = "<group>"; };
+		402790E7170B2F550090C64E /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = download.jpeg; path = ../../../Downloads/download.jpeg; sourceTree = "<group>"; };
+		402790E9170B30500090C64E /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		402790EB170B30E10090C64E /* GetCurrentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCurrentLocation.h; sourceTree = "<group>"; };
+		402790EC170B30E20090C64E /* GetCurrentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCurrentLocation.m; sourceTree = "<group>"; };
+		402790EE170B35D40090C64E /* WOEIDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOEIDUtil.h; sourceTree = "<group>"; };
+		402790EF170B35D40090C64E /* WOEIDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOEIDUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +121,12 @@
 				402790A0170ABA3B0090C64E /* TweetsAroundMeViewCell.h */,
 				402790A1170ABA3B0090C64E /* TweetsAroundMeViewCell.m */,
 				4027909D170AB9F30090C64E /* TweetsAroundMeViewController.h */,
+				402790EB170B30E10090C64E /* GetCurrentLocation.h */,
+				402790EC170B30E20090C64E /* GetCurrentLocation.m */,
 				4027909E170AB9F30090C64E /* TweetsAroundMeViewController.m */,
 				40279081170AB89D0090C64E /* Supporting Files */,
+				402790EE170B35D40090C64E /* WOEIDUtil.h */,
+				402790EF170B35D40090C64E /* WOEIDUtil.m */,
 			);
 			path = AroundMe;
 			sourceTree = "<group>";
@@ -112,6 +134,12 @@
 		40279081170AB89D0090C64E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				402790E9170B30500090C64E /* images.jpeg */,
+				402790E7170B2F550090C64E /* download.jpeg */,
+				402790E5170B2CBE0090C64E /* twitter-bird-white-on-blue.png */,
+				402790E3170B2CB70090C64E /* twitter-bird-blue-on-white.png */,
+				402790E1170B2CB10090C64E /* twitter-bird-dark-bgs.png */,
+				402790DF170B2C1B0090C64E /* twitter-bird-light-bgs.png */,
 				40279089170AB89D0090C64E /* AroundMeAppDelegate.h */,
 				4027908A170AB89D0090C64E /* AroundMeAppDelegate.m */,
 				40279082170AB89D0090C64E /* AroundMe-Info.plist */,
@@ -182,6 +210,12 @@
 				4027908F170AB89D0090C64E /* Default@2x.png in Resources */,
 				40279091170AB89D0090C64E /* Default-568h@2x.png in Resources */,
 				40279094170AB89D0090C64E /* MainStoryboard.storyboard in Resources */,
+				402790E0170B2C1B0090C64E /* twitter-bird-light-bgs.png in Resources */,
+				402790E2170B2CB10090C64E /* twitter-bird-dark-bgs.png in Resources */,
+				402790E4170B2CB70090C64E /* twitter-bird-blue-on-white.png in Resources */,
+				402790E6170B2CBE0090C64E /* twitter-bird-white-on-blue.png in Resources */,
+				402790E8170B2F550090C64E /* download.jpeg in Resources */,
+				402790EA170B30500090C64E /* images.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +231,8 @@
 				4027909F170AB9F30090C64E /* TweetsAroundMeViewController.m in Sources */,
 				402790A2170ABA3B0090C64E /* TweetsAroundMeViewCell.m in Sources */,
 				402790A5170ABD110090C64E /* TweetsAroundMe.m in Sources */,
+				402790ED170B30E20090C64E /* GetCurrentLocation.m in Sources */,
+				402790F0170B35D50090C64E /* WOEIDUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
