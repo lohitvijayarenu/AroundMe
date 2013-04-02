@@ -17,7 +17,11 @@
 		4027908F170AB89D0090C64E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4027908E170AB89D0090C64E /* Default@2x.png */; };
 		40279091170AB89D0090C64E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40279090170AB89D0090C64E /* Default-568h@2x.png */; };
 		40279094170AB89D0090C64E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40279092170AB89D0090C64E /* MainStoryboard.storyboard */; };
-		40279097170AB89D0090C64E /* AroundMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40279096170AB89D0090C64E /* AroundMeViewController.m */; };
+		4027909F170AB9F30090C64E /* TweetsAroundMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027909E170AB9F30090C64E /* TweetsAroundMeViewController.m */; };
+		402790A2170ABA3B0090C64E /* TweetsAroundMeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790A1170ABA3B0090C64E /* TweetsAroundMeViewCell.m */; };
+		402790A5170ABD110090C64E /* TweetsAroundMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790A4170ABD110090C64E /* TweetsAroundMe.m */; };
+		402790A7170ABEA60090C64E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402790A6170ABEA60090C64E /* Accounts.framework */; };
+		402790A9170ABEBE0090C64E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402790A8170ABEBE0090C64E /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +39,14 @@
 		4027908E170AB89D0090C64E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		40279090170AB89D0090C64E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		40279093170AB89D0090C64E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		40279095170AB89D0090C64E /* AroundMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AroundMeViewController.h; sourceTree = "<group>"; };
-		40279096170AB89D0090C64E /* AroundMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AroundMeViewController.m; sourceTree = "<group>"; };
+		4027909D170AB9F30090C64E /* TweetsAroundMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsAroundMeViewController.h; sourceTree = "<group>"; };
+		4027909E170AB9F30090C64E /* TweetsAroundMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsAroundMeViewController.m; sourceTree = "<group>"; };
+		402790A0170ABA3B0090C64E /* TweetsAroundMeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsAroundMeViewCell.h; sourceTree = "<group>"; };
+		402790A1170ABA3B0090C64E /* TweetsAroundMeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsAroundMeViewCell.m; sourceTree = "<group>"; };
+		402790A3170ABD110090C64E /* TweetsAroundMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsAroundMe.h; sourceTree = "<group>"; };
+		402790A4170ABD110090C64E /* TweetsAroundMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsAroundMe.m; sourceTree = "<group>"; };
+		402790A6170ABEA60090C64E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		402790A8170ABEBE0090C64E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402790A9170ABEBE0090C64E /* Social.framework in Frameworks */,
+				402790A7170ABEA60090C64E /* Accounts.framework in Frameworks */,
 				4027907B170AB89D0090C64E /* UIKit.framework in Frameworks */,
 				4027907D170AB89D0090C64E /* Foundation.framework in Frameworks */,
 				4027907F170AB89D0090C64E /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +85,8 @@
 		40279079170AB89D0090C64E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				402790A8170ABEBE0090C64E /* Social.framework */,
+				402790A6170ABEA60090C64E /* Accounts.framework */,
 				4027907A170AB89D0090C64E /* UIKit.framework */,
 				4027907C170AB89D0090C64E /* Foundation.framework */,
 				4027907E170AB89D0090C64E /* CoreGraphics.framework */,
@@ -83,11 +97,13 @@
 		40279080170AB89D0090C64E /* AroundMe */ = {
 			isa = PBXGroup;
 			children = (
-				40279089170AB89D0090C64E /* AroundMeAppDelegate.h */,
-				4027908A170AB89D0090C64E /* AroundMeAppDelegate.m */,
 				40279092170AB89D0090C64E /* MainStoryboard.storyboard */,
-				40279095170AB89D0090C64E /* AroundMeViewController.h */,
-				40279096170AB89D0090C64E /* AroundMeViewController.m */,
+				402790A3170ABD110090C64E /* TweetsAroundMe.h */,
+				402790A4170ABD110090C64E /* TweetsAroundMe.m */,
+				402790A0170ABA3B0090C64E /* TweetsAroundMeViewCell.h */,
+				402790A1170ABA3B0090C64E /* TweetsAroundMeViewCell.m */,
+				4027909D170AB9F30090C64E /* TweetsAroundMeViewController.h */,
+				4027909E170AB9F30090C64E /* TweetsAroundMeViewController.m */,
 				40279081170AB89D0090C64E /* Supporting Files */,
 			);
 			path = AroundMe;
@@ -96,6 +112,8 @@
 		40279081170AB89D0090C64E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				40279089170AB89D0090C64E /* AroundMeAppDelegate.h */,
+				4027908A170AB89D0090C64E /* AroundMeAppDelegate.m */,
 				40279082170AB89D0090C64E /* AroundMe-Info.plist */,
 				40279083170AB89D0090C64E /* InfoPlist.strings */,
 				40279086170AB89D0090C64E /* main.m */,
@@ -176,7 +194,9 @@
 			files = (
 				40279087170AB89D0090C64E /* main.m in Sources */,
 				4027908B170AB89D0090C64E /* AroundMeAppDelegate.m in Sources */,
-				40279097170AB89D0090C64E /* AroundMeViewController.m in Sources */,
+				4027909F170AB9F30090C64E /* TweetsAroundMeViewController.m in Sources */,
+				402790A2170ABA3B0090C64E /* TweetsAroundMeViewCell.m in Sources */,
+				402790A5170ABD110090C64E /* TweetsAroundMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
