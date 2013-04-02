@@ -10,5 +10,6 @@
 
 @interface TweetsAroundMe : NSObject
 - (NSArray *) fetchTweets:(NSString *)aroundLocation; // Return tweets
+- (NSArray *) fetchTrendingTweets:(NSString *)aroundWOEID;
 @property (nonatomic, strong) NSArray * tweets;
 @end

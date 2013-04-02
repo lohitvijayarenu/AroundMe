@@ -60,6 +60,10 @@
 {
     NSString *location = [GetCurrentLocation getCurrentLocation];
     self.tweets = [self.tweetsAroundMe fetchTweets:location];
+    NSArray *trendingTweets = [self.tweetsAroundMe fetchTrendingTweets:[WOEIDUtil getCurrentWOEID]];
+    for (NSArray *tt in trendingTweets) {
+        NSLog(@"Trending Tweet: %@", tt);
+    }
 }
 
 - (void)didReceiveMemoryWarning

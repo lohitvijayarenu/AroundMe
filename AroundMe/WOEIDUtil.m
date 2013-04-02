@@ -21,7 +21,8 @@
 
 +(NSString *) getCurrentWOEID
 {
-    return @"12797158"; // This is WOEID for location 37.781157,-122.398720
+    //return @"12797158"; // This is WOEID for location 37.781157,-122.398720
+    return @"1";
 }
 
 
