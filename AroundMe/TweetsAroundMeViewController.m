@@ -60,10 +60,6 @@
 {
     NSString *location = [GetCurrentLocation getCurrentLocation];
     self.tweets = [self.tweetsAroundMe fetchTweets:location];
-    NSArray *trendingTweets = [self.tweetsAroundMe fetchTrendingTweets:[WOEIDUtil getCurrentWOEID]];
-    for (NSArray *tt in trendingTweets) {
-        NSLog(@"Trending Tweet: %@", tt);
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,7 +80,7 @@
 {
     // Return the number of rows in the section.
     //return self.tweets.count;
-    return 20;
+    return 20; // HACK!!
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

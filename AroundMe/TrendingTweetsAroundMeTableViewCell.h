@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TrendingTweetsAroundMeTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UITextView *trendingTweetText;
+@property (strong, nonatomic) IBOutlet UIImageView *trendingTweetProfilePic;
 
 @end

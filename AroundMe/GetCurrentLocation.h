@@ -13,4 +13,5 @@
 +(NSString *) getCurrentLat;
 +(NSString *) getCurrentLog;
 +(NSString *)getCurrentLocationWithoutRadius;
++(NSString *)getCurrentLocationWithLargetRadius;
 @end

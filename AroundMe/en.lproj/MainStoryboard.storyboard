@@ -51,7 +51,7 @@
                                         </textView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b00-cv-PoO">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="58" id="Hjl-Qj-TbK"/>
+                                                <constraint firstAttribute="height" constant="67" id="J6D-0X-yBt"/>
                                                 <constraint firstAttribute="width" constant="67" id="Yhp-O9-7ml"/>
                                             </constraints>
                                         </imageView>
@@ -81,23 +81,51 @@
             </objects>
             <point key="canvasLocation" x="285" y="-497"/>
         </scene>
-        <!--Table View Controller - Item-->
+        <!--Trending Tweet Around Me Table View Controller - Trending Around Me-->
         <scene sceneID="h8f-le-eoD">
             <objects>
-                <tableViewController id="BsX-Hw-oiX" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w9R-nf-edf">
+                <tableViewController id="BsX-Hw-oiX" customClass="TrendingTweetAroundMeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="w9R-nf-edf">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notUsedYet" id="bbt-Zm-ENT">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="trendingTweetsCell" rowHeight="108" id="bbt-Zm-ENT" customClass="TrendingTweetsAroundMeTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mg0-uk-gfd">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="67" id="pYs-IR-ms8"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-dl-rfv">
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="219" id="4xE-ea-CPr"/>
+                                                <constraint firstAttribute="height" constant="81" id="qLv-gr-VSb"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="cD7-dl-rfv" firstAttribute="centerY" secondItem="mg0-uk-gfd" secondAttribute="centerY" type="default" id="Rgj-7o-Hhh"/>
+                                    <constraint firstItem="cD7-dl-rfv" firstAttribute="top" secondItem="bbt-Zm-ENT" secondAttribute="top" constant="13" id="WiV-OT-lFs"/>
+                                    <constraint firstItem="mg0-uk-gfd" firstAttribute="leading" secondItem="bbt-Zm-ENT" secondAttribute="leading" constant="10" id="XAA-XC-lt0"/>
+                                    <constraint firstItem="mg0-uk-gfd" firstAttribute="top" secondItem="bbt-Zm-ENT" secondAttribute="top" constant="20" type="default" id="lpx-6u-zIx"/>
+                                    <constraint firstItem="cD7-dl-rfv" firstAttribute="leading" secondItem="bbt-Zm-ENT" secondAttribute="leading" constant="92" id="z2w-k3-Pgz"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="trendingTweetProfilePic" destination="mg0-uk-gfd" id="NN6-Ni-4dp"/>
+                                    <outlet property="trendingTweetText" destination="cD7-dl-rfv" id="dx6-ZP-zgH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -105,7 +133,7 @@
                             <outlet property="delegate" destination="BsX-Hw-oiX" id="7Vj-yL-tMh"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="B4F-DC-GSo"/>
+                    <tabBarItem key="tabBarItem" title="Trending Around Me" id="B4F-DC-GSo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDQ-ZX-g0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,6 +143,16 @@
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TrendingTweetAroundMeTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrendingTweetAroundMeTableViewController.h"/>
+        </class>
+        <class className="TrendingTweetsAroundMeTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrendingTweetsAroundMeTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="trendingTweetProfilePic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="trendingTweetText" candidateClass="UITextView"/>
+            </relationships>
         </class>
         <class className="TweetsAroundMeViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TweetsAroundMeViewCell.h"/>

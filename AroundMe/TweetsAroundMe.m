@@ -29,7 +29,7 @@
     return self.tweets;
 }
 
-- (NSArray *)fetchTrendingTweets:(NSString *)aroundWOEID
+- (NSArray *)fetchTrendingTweets:(NSString *) aroundLocation :(NSString *)aroundWOEID
 {
     //_tempTrends = nil; // Let it allocate and populate again
     [self getTrends:aroundWOEID];
@@ -45,7 +45,7 @@
             }
         }
        // NSLog(@"Query String is : %@", queryString);
-        [self getTweetsNearLocation:[GetCurrentLocation getCurrentLocation] :[WOEIDUtil getCurrentWOEID]];
+        [self getTweetsNearLocation:aroundLocation :aroundWOEID];
     }
         
     return _tempTrendingTweets;
@@ -136,7 +136,7 @@
      {
          if (granted == YES)
          {
-             NSLog(@"Inside Location Query Granted!");
+             //NSLog(@"Inside Location Query Granted!");
              NSArray *arrayOfAccounts = [account
                                          accountsWithAccountType:accountType];
              

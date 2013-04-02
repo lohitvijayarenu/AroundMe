@@ -11,12 +11,17 @@
 @implementation GetCurrentLocation
 +(NSString *)getCurrentLocation
 {
-  return @"37.781157,-122.398720,1mi";
+  return @"37.781157,-122.398720,2mi";
 }
 
 +(NSString *)getCurrentLocationWithoutRadius
 {
     return @"37.781157,-122.398720";
+}
+
++(NSString *)getCurrentLocationWithLargetRadius
+{
+    return @"37.781157,-122.398720,15mi";
 }
 
 +(NSString *) getCurrentLat

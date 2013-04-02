@@ -7,9 +7,14 @@
 //
 
 #import "TrendingTweetAroundMeTableViewController.h"
+#import "TrendingTweetsAroundMeTableViewCell.h"
+#import "TweetsAroundMe.h"
+#import "GetCurrentLocation.h"
+#import "WOEIDUtil.h"
 
 @interface TrendingTweetAroundMeTableViewController ()
-
+@property (strong, nonatomic) NSArray *tweets;
+@property (strong, nonatomic) TweetsAroundMe *tweetsAroundMe;
 @end
 
 @implementation TrendingTweetAroundMeTableViewController
@@ -20,18 +25,42 @@
     if (self) {
         // Custom initialization
     }
+    [self fetchTweets];
     return self;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self fetchTweets];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchTweets];
+}
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+- (TweetsAroundMe *) tweetsAroundMe
+{
+    if (!_tweetsAroundMe) _tweetsAroundMe = [[TweetsAroundMe alloc]init];
+    return _tweetsAroundMe;
+}
+
+- (NSArray *) tweets
+{
+    NSString *location = [GetCurrentLocation getCurrentLocationWithLargetRadius];
+    if (!_tweets) _tweets = [self.tweetsAroundMe fetchTrendingTweets:location :[WOEIDUtil getCurrentWOEID]];
+    return _tweets;
+}
+
+// Fetch tweets from tweetsAroundMe and populate tweets
+- (void) fetchTweets
+{
+    NSString *location = [GetCurrentLocation getCurrentLocationWithLargetRadius];
+    
+    self.tweets = [self.tweetsAroundMe fetchTrendingTweets:location :[WOEIDUtil getCurrentWOEID]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,25 +73,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 20; // HACK!!
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    static NSString *CellIdentifier = @"trendingTweetsCell";
+    if ([indexPath row] > self.tweets.count)
+    {
+        NSLog(@"PROBLEM!!!");
+        //cell.trendingTweetText.text = @"Not loaded";
+        //return cell;
+    }
+    TrendingTweetsAroundMeTableViewCell *cell = [tableView
+                                    dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Configure the cell...
-    
+    //int row = [indexPath row];
+    NSDictionary *tweet = self.tweets[[indexPath row]];
+    cell.trendingTweetText.text = tweet[@"text"];
+    NSString *profilePicUrl = tweet[@"user" ][@"profile_image_url"];
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicUrl]];
+    cell.trendingTweetProfilePic.image = [UIImage imageWithData:imageData];
     return cell;
 }
 

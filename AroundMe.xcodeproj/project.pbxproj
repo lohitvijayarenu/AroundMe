@@ -30,6 +30,8 @@
 		402790EA170B30500090C64E /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 402790E9170B30500090C64E /* images.jpeg */; };
 		402790ED170B30E20090C64E /* GetCurrentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790EC170B30E20090C64E /* GetCurrentLocation.m */; };
 		402790F0170B35D50090C64E /* WOEIDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790EF170B35D40090C64E /* WOEIDUtil.m */; };
+		402790F3170B80800090C64E /* TrendingTweetAroundMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790F2170B80800090C64E /* TrendingTweetAroundMeTableViewController.m */; };
+		402790F9170B84A90090C64E /* TrendingTweetsAroundMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 402790F8170B84A80090C64E /* TrendingTweetsAroundMeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,10 @@
 		402790EC170B30E20090C64E /* GetCurrentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCurrentLocation.m; sourceTree = "<group>"; };
 		402790EE170B35D40090C64E /* WOEIDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOEIDUtil.h; sourceTree = "<group>"; };
 		402790EF170B35D40090C64E /* WOEIDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOEIDUtil.m; sourceTree = "<group>"; };
+		402790F1170B807F0090C64E /* TrendingTweetAroundMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingTweetAroundMeTableViewController.h; sourceTree = "<group>"; };
+		402790F2170B80800090C64E /* TrendingTweetAroundMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingTweetAroundMeTableViewController.m; sourceTree = "<group>"; };
+		402790F7170B84A80090C64E /* TrendingTweetsAroundMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingTweetsAroundMeTableViewCell.h; sourceTree = "<group>"; };
+		402790F8170B84A80090C64E /* TrendingTweetsAroundMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingTweetsAroundMeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				40279092170AB89D0090C64E /* MainStoryboard.storyboard */,
+				402790F7170B84A80090C64E /* TrendingTweetsAroundMeTableViewCell.h */,
+				402790F8170B84A80090C64E /* TrendingTweetsAroundMeTableViewCell.m */,
+				402790F1170B807F0090C64E /* TrendingTweetAroundMeTableViewController.h */,
+				402790F2170B80800090C64E /* TrendingTweetAroundMeTableViewController.m */,
 				402790A3170ABD110090C64E /* TweetsAroundMe.h */,
 				402790A4170ABD110090C64E /* TweetsAroundMe.m */,
 				402790A0170ABA3B0090C64E /* TweetsAroundMeViewCell.h */,
@@ -233,6 +243,8 @@
 				402790A5170ABD110090C64E /* TweetsAroundMe.m in Sources */,
 				402790ED170B30E20090C64E /* GetCurrentLocation.m in Sources */,
 				402790F0170B35D50090C64E /* WOEIDUtil.m in Sources */,
+				402790F3170B80800090C64E /* TrendingTweetAroundMeTableViewController.m in Sources */,
+				402790F9170B84A90090C64E /* TrendingTweetsAroundMeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
