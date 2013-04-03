@@ -51,20 +51,22 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+    [self fetchTweets];
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 20; // HACK!!
+    [self fetchTweets];
+    return self.tweets.count; // HACK!!
 }
 
 // Fetch tweets from tweetsAroundMe and populate tweets
 - (void) fetchTweets
 {
     TweetsAroundMeSingleton *sharedInstance = [TweetsAroundMeSingleton sharedInstance];
-    self.tweets = [sharedInstance fetchTweets];
+    self.tweets = [sharedInstance fetchTrendingTweets];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

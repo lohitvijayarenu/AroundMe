@@ -104,7 +104,13 @@
                           NSMutableArray *tempArray = [[NSMutableArray alloc]init];
                           
                           for (NSDictionary *a in tmpA) {
+                              if (nil == a || [NSNull null] == (id) a) {
+                                  continue;
+                              }
                               NSArray *trends = a[@"trends"];
+                              if (nil == trends || [NSNull null] == (id) trends) {
+                                  continue;
+                              }
                               for (NSDictionary *a2 in trends) {
                                   [tempArray addObject:a2[@"name"]];
                               }
