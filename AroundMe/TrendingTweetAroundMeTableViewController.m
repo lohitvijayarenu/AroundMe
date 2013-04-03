@@ -25,20 +25,17 @@
     if (self) {
         // Custom initialization
     }
-    [self fetchTweets];
     return self;
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self fetchTweets];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self fetchTweets];
 }
 
 
@@ -85,6 +82,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self fetchTweets];
     static NSString *CellIdentifier = @"trendingTweetsCell";
     if ([indexPath row] > self.tweets.count)
     {
@@ -99,6 +97,13 @@
     NSDictionary *tweet = self.tweets[[indexPath row]];
     cell.trendingTweetText.text = tweet[@"text"];
     NSString *profilePicUrl = tweet[@"user" ][@"profile_image_url"];
+    NSDictionary *geo = tweet[@"geo"];
+    NSLog(@"Geo got is : %@", geo);
+
+    if (geo) {
+        NSArray *coordinates = geo[@"coordinates"];
+        NSLog(@"Geo values : %@", coordinates);
+    }
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicUrl]];
     cell.trendingTweetProfilePic.image = [UIImage imageWithData:imageData];
     return cell;

@@ -14,8 +14,8 @@
 #import <Social/Social.h>
 
 @interface TweetsAroundMe()
-@property (strong, nonatomic) NSArray *tempTrends;
-@property (strong, nonatomic) NSArray *tempTrendingTweets;
+@property (strong, atomic) NSArray *tempTrends;
+@property (strong, atomic) NSArray *tempTrendingTweets;
 @end
 
 @implementation TweetsAroundMe
