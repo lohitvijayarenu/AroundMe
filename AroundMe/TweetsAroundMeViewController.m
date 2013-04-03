@@ -11,10 +11,10 @@
 #import "TweetsAroundMeViewCell.h"
 #import "GetCurrentLocation.h"
 #import "WOEIDUtil.h"
+#import "TweetsAroundMeSingleton.h"
 
 @interface TweetsAroundMeViewController ()
 @property (strong, nonatomic) NSArray *tweets;
-@property (strong, nonatomic) TweetsAroundMe *tweetsAroundMe;
 @end
 
 @implementation TweetsAroundMeViewController
@@ -42,24 +42,12 @@
     
 }
 
-- (TweetsAroundMe *) tweetsAroundMe
-{
-    if (!_tweetsAroundMe) _tweetsAroundMe = [[TweetsAroundMe alloc]init];
-    return _tweetsAroundMe;
-}
-
-- (NSArray *) tweets
-{
-    NSString *location = [GetCurrentLocation getCurrentLocation];
-    if (!_tweets) _tweets = [self.tweetsAroundMe fetchTweets:location];
-    return _tweets;
-}
 
 // Fetch tweets from tweetsAroundMe and populate tweets
 - (void) fetchTweets
 {
-    NSString *location = [GetCurrentLocation getCurrentLocation];
-    self.tweets = [self.tweetsAroundMe fetchTweets:location];
+    TweetsAroundMeSingleton *sharedInstance = [TweetsAroundMeSingleton sharedInstance];
+    self.tweets = [sharedInstance fetchTweets];
 }
 
 - (void)didReceiveMemoryWarning

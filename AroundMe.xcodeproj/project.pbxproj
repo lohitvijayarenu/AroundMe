@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40216AE4170CA9240061C6D7 /* TweetsAroundMeSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 40216AE3170CA9240061C6D7 /* TweetsAroundMeSingleton.m */; };
 		4027907B170AB89D0090C64E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4027907A170AB89D0090C64E /* UIKit.framework */; };
 		4027907D170AB89D0090C64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4027907C170AB89D0090C64E /* Foundation.framework */; };
 		4027907F170AB89D0090C64E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4027907E170AB89D0090C64E /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40216AE2170CA9240061C6D7 /* TweetsAroundMeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsAroundMeSingleton.h; sourceTree = "<group>"; };
+		40216AE3170CA9240061C6D7 /* TweetsAroundMeSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsAroundMeSingleton.m; sourceTree = "<group>"; };
 		40279077170AB89D0090C64E /* AroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4027907A170AB89D0090C64E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4027907C170AB89D0090C64E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,7 +104,6 @@
 		4027906E170AB89D0090C64E = {
 			isa = PBXGroup;
 			children = (
-				40279131170BED8A0090C64E /* MapKit.framework */,
 				40279080170AB89D0090C64E /* AroundMe */,
 				40279079170AB89D0090C64E /* Frameworks */,
 				40279078170AB89D0090C64E /* Products */,
@@ -119,6 +121,7 @@
 		40279079170AB89D0090C64E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40279131170BED8A0090C64E /* MapKit.framework */,
 				402790A8170ABEBE0090C64E /* Social.framework */,
 				402790A6170ABEA60090C64E /* Accounts.framework */,
 				4027907A170AB89D0090C64E /* UIKit.framework */,
@@ -131,6 +134,8 @@
 		40279080170AB89D0090C64E /* AroundMe */ = {
 			isa = PBXGroup;
 			children = (
+				40216AE2170CA9240061C6D7 /* TweetsAroundMeSingleton.h */,
+				40216AE3170CA9240061C6D7 /* TweetsAroundMeSingleton.m */,
 				40279092170AB89D0090C64E /* MainStoryboard.storyboard */,
 				40279133170BF4030090C64E /* MyLocation.h */,
 				40279134170BF4040090C64E /* MyLocation.m */,
@@ -261,6 +266,7 @@
 				402790F9170B84A90090C64E /* TrendingTweetsAroundMeTableViewCell.m in Sources */,
 				40279130170BED640090C64E /* TweetsOnMapViewController.m in Sources */,
 				40279135170BF4050090C64E /* MyLocation.m in Sources */,
+				40216AE4170CA9240061C6D7 /* TweetsAroundMeSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +389,7 @@
 				4027909C170AB89D0090C64E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

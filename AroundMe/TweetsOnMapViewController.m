@@ -12,6 +12,7 @@
 #import "TweetsAroundMe.h"
 #import "GetCurrentLocation.h"
 #import "WOEIDUtil.h"
+#import "TweetsAroundMeViewController.h"
 
 @interface TweetsOnMapViewController ()
 @property (strong, nonatomic) NSArray *tweets;
@@ -96,10 +97,16 @@
     }
     
     for (NSDictionary *tweet in self.tweets) {
+        NSLog(@"Tweet received is %@", tweet);
         NSString *tweetText = tweet[@"text"];
         NSString *userName = tweet[@"user"][@"screen_name"];
+        NSString *geoString = tweet[@"geo"];
+        if (nil == geoString || [NSNull null] == (id)geoString) {
+            NSLog(@"Ah! sucker!");
+            continue;
+        }
         NSDictionary *geo = tweet[@"geo"];
-        if (geo) {
+        if (geo != nil) {
             NSArray *coordinates = geo[@"coordinates"];
             NSLog(@"Geo values : %@", coordinates);
         

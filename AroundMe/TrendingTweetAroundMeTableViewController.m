@@ -11,10 +11,11 @@
 #import "TweetsAroundMe.h"
 #import "GetCurrentLocation.h"
 #import "WOEIDUtil.h"
+#import "TweetsAroundMeSingleton.h"
+
 
 @interface TrendingTweetAroundMeTableViewController ()
 @property (strong, nonatomic) NSArray *tweets;
-@property (strong, nonatomic) TweetsAroundMe *tweetsAroundMe;
 @end
 
 @implementation TrendingTweetAroundMeTableViewController
@@ -39,27 +40,6 @@
 }
 
 
-- (TweetsAroundMe *) tweetsAroundMe
-{
-    if (!_tweetsAroundMe) _tweetsAroundMe = [[TweetsAroundMe alloc]init];
-    return _tweetsAroundMe;
-}
-
-- (NSArray *) tweets
-{
-    NSString *location = [GetCurrentLocation getCurrentLocationWithLargetRadius];
-    if (!_tweets) _tweets = [self.tweetsAroundMe fetchTrendingTweets:location :[WOEIDUtil getCurrentWOEID]];
-    return _tweets;
-}
-
-// Fetch tweets from tweetsAroundMe and populate tweets
-- (void) fetchTweets
-{
-    NSString *location = [GetCurrentLocation getCurrentLocationWithLargetRadius];
-    
-    self.tweets = [self.tweetsAroundMe fetchTrendingTweets:location :[WOEIDUtil getCurrentWOEID]];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -80,6 +60,13 @@
     return 20; // HACK!!
 }
 
+// Fetch tweets from tweetsAroundMe and populate tweets
+- (void) fetchTweets
+{
+    TweetsAroundMeSingleton *sharedInstance = [TweetsAroundMeSingleton sharedInstance];
+    self.tweets = [sharedInstance fetchTweets];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self fetchTweets];
@@ -97,13 +84,7 @@
     NSDictionary *tweet = self.tweets[[indexPath row]];
     cell.trendingTweetText.text = tweet[@"text"];
     NSString *profilePicUrl = tweet[@"user" ][@"profile_image_url"];
-    NSDictionary *geo = tweet[@"geo"];
-    NSLog(@"Geo got is : %@", geo);
-
-    if (geo) {
-        NSArray *coordinates = geo[@"coordinates"];
-        NSLog(@"Geo values : %@", coordinates);
-    }
+    
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicUrl]];
     cell.trendingTweetProfilePic.image = [UIImage imageWithData:imageData];
     return cell;

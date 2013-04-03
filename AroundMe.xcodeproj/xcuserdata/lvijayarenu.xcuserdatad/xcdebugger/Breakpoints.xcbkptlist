@@ -8,7 +8,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386613829.582378"
+         timestampString = "386710243.285358"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "41"
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386633191.853694"
+         timestampString = "386710243.285358"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
+         startingLineNumber = "76"
+         endingLineNumber = "76"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,25 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386633191.853694"
+         timestampString = "386710243.285358"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
+         startingLineNumber = "70"
+         endingLineNumber = "70"
          landmarkName = "-tableView:numberOfRowsInSection:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386615516.359179"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-tweetsAroundMe"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -229,37 +216,50 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386628409.217712"
+         timestampString = "386710243.285358"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "62"
-         endingLineNumber = "62"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "-fetchTweets"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TrendingTweetAroundMeTableViewController.m"
-         timestampString = "386663943.879827"
+         timestampString = "386710243.285358"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsOnMapViewController.m"
-         timestampString = "386663505.274905"
+         timestampString = "386697208.156079"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
+         landmarkName = "-plotTweetsOnMap"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AroundMe/TweetsOnMapViewController.m"
+         timestampString = "386697222.351434"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "100"
+         endingLineNumber = "100"
          landmarkName = "-plotTweetsOnMap"
          landmarkType = "5">
       </FileBreakpoint>

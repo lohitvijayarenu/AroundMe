@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetsAroundme.h"
 
 @interface TweetsAroundMeViewController : UITableViewController
 @end
