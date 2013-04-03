@@ -13,10 +13,11 @@
 #import "GetCurrentLocation.h"
 #import "WOEIDUtil.h"
 #import "TweetsAroundMeViewController.h"
+#import "TweetsAroundMeSingleton.h"
+
 
 @interface TweetsOnMapViewController ()
 @property (strong, nonatomic) NSArray *tweets;
-@property (strong, nonatomic) TweetsAroundMe *tweetsAroundMe;
 @end
 
 @implementation TweetsOnMapViewController
@@ -30,25 +31,13 @@
     return self;
 }
 
-- (TweetsAroundMe *) tweetsAroundMe
-{
-    if (!_tweetsAroundMe) _tweetsAroundMe = [[TweetsAroundMe alloc]init];
-    return _tweetsAroundMe;
-}
-
-- (NSArray *) tweets
-{
-    NSString *location = [GetCurrentLocation getCurrentLocationWithLargetRadius];
-    if (!_tweets) _tweets = [self.tweetsAroundMe fetchTrendingTweets:location :[WOEIDUtil getCurrentWOEID]];
-    return _tweets;
-}
 
 // Fetch tweets from tweetsAroundMe and populate tweets
 - (void) fetchTweets
 {
-    NSString *location = [GetCurrentLocation getCurrentLocationWithLargetRadius];
-    
-    self.tweets = [self.tweetsAroundMe fetchTrendingTweets:location :[WOEIDUtil getCurrentWOEID]];
+    TweetsAroundMeSingleton *sharedInstance = [TweetsAroundMeSingleton sharedInstance];
+    //self.tweets = [sharedInstance fetchTrendingTweets];
+    self.tweets = [sharedInstance fetchTweets];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -65,8 +54,8 @@
         
         annotationView.enabled = YES;
         annotationView.canShowCallout = YES;
-        //annotationView.image=[UIImage imageNamed:@"arrest.png"];//here we use a nice image instead of the default pins
         
+        annotationView.image=[UIImage imageNamed:@"twitter-logo-small.gif"];        
         return annotationView;
     }
     

@@ -11,6 +11,7 @@
 @implementation MyLocation
 @synthesize tweet = _tweet;
 @synthesize user = _user;
+@synthesize pic = _pic;
 @synthesize coordinate = _coordinate;
 
 - (id)initWithName:(NSString*)tweet user:(NSString *)user coordinate:(CLLocationCoordinate2D)coordinate {
@@ -33,4 +34,8 @@
     return _user;
 }
 
+
+- (NSString *) getPic {
+    return _pic;
+}
 @end

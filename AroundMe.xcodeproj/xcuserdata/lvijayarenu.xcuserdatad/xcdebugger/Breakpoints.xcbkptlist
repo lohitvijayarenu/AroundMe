@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386710243.285358"
+         timestampString = "386717641.58139"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386710243.285358"
+         timestampString = "386717641.58139"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-tableView:numberOfRowsInSection:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386717361.013237"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
          landmarkName = "-fetchTweets:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386717361.013237"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
          landmarkName = "-fetchTweets:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386718575.653521"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-fetchTrendingTweets::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,59 +99,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
-         landmarkName = "-getTrends:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
-         landmarkName = "-getTrends:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386713386.748604"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "120"
-         endingLineNumber = "120"
-         landmarkName = "-getTrends:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386713386.748604"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "119"
-         endingLineNumber = "119"
-         landmarkName = "-getTrends:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386718981.302201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "103"
@@ -164,12 +112,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386718981.302201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
-         landmarkName = "-fetchTrendingTweets::"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
+         landmarkName = "-getTrends:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -177,12 +125,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386718981.302201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
-         landmarkName = "-fetchTrendingTweets::"
+         startingLineNumber = "122"
+         endingLineNumber = "122"
+         landmarkName = "-getTrends:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -190,7 +138,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386713386.748604"
+         timestampString = "386718981.302201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "121"
@@ -203,11 +151,50 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMe.m"
-         timestampString = "386628027.830885"
+         timestampString = "386718981.302201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
+         landmarkName = "-getTrends:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AroundMe/TweetsAroundMe.m"
+         timestampString = "386718981.302201"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "-fetchTrendingTweets::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AroundMe/TweetsAroundMe.m"
+         timestampString = "386718981.302201"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
+         landmarkName = "-getTrends:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AroundMe/TweetsAroundMe.m"
+         timestampString = "386718981.302201"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
          landmarkName = "-fetchTrendingTweets::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,7 +203,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsAroundMeViewController.m"
-         timestampString = "386710243.285358"
+         timestampString = "386717641.58139"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "50"
@@ -229,11 +216,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TrendingTweetAroundMeTableViewController.m"
-         timestampString = "386712037.428711"
+         timestampString = "386718981.302201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -242,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsOnMapViewController.m"
-         timestampString = "386697208.156079"
+         timestampString = "386721620.546825"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
          landmarkName = "-plotTweetsOnMap"
          landmarkType = "5">
       </FileBreakpoint>
@@ -255,12 +242,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AroundMe/TweetsOnMapViewController.m"
-         timestampString = "386697222.351434"
+         timestampString = "386721620.546825"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
          landmarkName = "-plotTweetsOnMap"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AroundMe/TrendingTweetAroundMeTableViewController.m"
+         timestampString = "386716955.273486"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "69"
+         endingLineNumber = "69"
+         landmarkName = "-fetchTweets"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

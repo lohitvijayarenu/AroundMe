@@ -48,6 +48,7 @@
 {
     TweetsAroundMeSingleton *sharedInstance = [TweetsAroundMeSingleton sharedInstance];
     self.tweets = [sharedInstance fetchTweets];
+    //self.tweets = [sharedInstance fetchTrendingTweets];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,6 +74,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"Working self.tweets size is : %d", self.tweets.count);
     static NSString *CellIdentifier = @"tweetTableCell";
     TweetsAroundMeViewCell *cell = [tableView
                               dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];

@@ -26,17 +26,20 @@
     if (self) {
         // Custom initialization
     }
+    [self fetchTweets];
     return self;
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self fetchTweets];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchTweets];
 }
 
 
@@ -51,15 +54,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    [self fetchTweets];
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    [self fetchTweets];
-    return self.tweets.count; // HACK!!
+    return 20; // HACK!!
 }
 
 // Fetch tweets from tweetsAroundMe and populate tweets
@@ -67,28 +68,38 @@
 {
     TweetsAroundMeSingleton *sharedInstance = [TweetsAroundMeSingleton sharedInstance];
     self.tweets = [sharedInstance fetchTrendingTweets];
+    //self.tweets = [sharedInstance fetchTweets];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self fetchTweets];
+    NSLog(@"self.tweets size is : %d", self.tweets.count);
+    NSLog(@"Inside tableView");
     static NSString *CellIdentifier = @"trendingTweetsCell";
-    if ([indexPath row] > self.tweets.count)
-    {
-        NSLog(@"PROBLEM!!!");
-        //cell.trendingTweetText.text = @"Not loaded";
-        //return cell;
-    }
+    
     TrendingTweetsAroundMeTableViewCell *cell = [tableView
                                     dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Configure the cell...
     //int row = [indexPath row];
+    //NSLog(@"Inside tableView after deque cell");
     NSDictionary *tweet = self.tweets[[indexPath row]];
-    cell.trendingTweetText.text = tweet[@"text"];
+
+   // NSLog(@" Dumping entire tweet : %@", tweet);
+   // cell.trendingTweetText.text = tweet[@"text"];
+    NSLog(@"Inside tableView after after tweet fetch");
+
     NSString *profilePicUrl = tweet[@"user" ][@"profile_image_url"];
+    //NSLog(@"Inside tableView after after profile image url fetch");
+
     
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicUrl]];
-    cell.trendingTweetProfilePic.image = [UIImage imageWithData:imageData];
+    if (nil == profilePicUrl || [NSNull null] == (id)profilePicUrl) {
+        NSLog(@"Ah Sucker 2!!");
+    } else {
+    
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicUrl]];
+        cell.trendingTweetProfilePic.image = [UIImage imageWithData:imageData];
+    }
     return cell;
 }
 

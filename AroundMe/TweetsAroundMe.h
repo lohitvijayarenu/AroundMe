@@ -12,4 +12,6 @@
 - (NSArray *) fetchTweets:(NSString *)aroundLocation; // Return tweets
 - (NSArray *)fetchTrendingTweets:(NSString *) aroundLocation :(NSString *)aroundWOEID;
 @property (nonatomic, strong) NSArray * tweets;
+@property (nonatomic, strong) NSArray * tempTrends;
+@property (nonatomic, strong) NSArray * tempTrendingTweets;
 @end

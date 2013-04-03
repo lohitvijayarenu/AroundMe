@@ -14,8 +14,6 @@
 #import <Social/Social.h>
 
 @interface TweetsAroundMe()
-@property (strong, nonatomic) NSArray *tempTrends;
-@property (strong, nonatomic) NSArray *tempTrendingTweets;
 @end
 
 @implementation TweetsAroundMe
@@ -33,7 +31,10 @@
 {
     //_tempTrends = nil; // Let it allocate and populate again
     [self getTrends:aroundWOEID];
-    if (self.tempTrends.count > 1) {
+    if (nil == self.tempTrends || [NSNull null] == (id)self.tempTrends) {
+        NSLog(@"Are we having problem here dude?");
+        self.tempTrends = @[@"I", @"at"];
+    } else if (self.tempTrends.count > 1) {
        // NSLog(@"_tempTrends : %@", self.tempTrends);
         
         NSMutableString *queryString = [[NSMutableString alloc]init];
@@ -41,14 +42,15 @@
             if (i == 0) {
                 [queryString appendString:self.tempTrends[i]];
             } else {
-                [queryString appendFormat:@" OR %@", self.tempTrends[i]];
+                //[queryString appendFormat:@" OR %@", self.tempTrends[i]];
             }
         }
-       // NSLog(@"Query String is : %@", queryString);
-        [self getTweetsNearLocation:aroundLocation :aroundWOEID];
+        NSLog(@"Query String is : %@", queryString);
+       
+        [self getTweetsNearLocation:aroundLocation :queryString];
     }
         
-    return _tempTrendingTweets;
+    return self.tempTrendingTweets;
 }
 
 
@@ -64,7 +66,7 @@
      {
          if (granted == YES)
          {
-             //NSLog(@"Inside aroundWOEID Granted!");
+             NSLog(@"Inside getTrends!");
              NSArray *arrayOfAccounts = [account
                                          accountsWithAccountType:accountType];
              
@@ -125,9 +127,11 @@
                   }];
              }
          } else {
-             // Handle failure to get account access
+             NSLog(@"Account handle error in getTrends!");
          }
      }];
+    NSLog(@"Leaving getTrends!");
+
 
 }
 
@@ -142,7 +146,7 @@
      {
          if (granted == YES)
          {
-             //NSLog(@"Inside Location Query Granted!");
+             NSLog(@"Inside Location Query Granted!");
              NSArray *arrayOfAccounts = [account
                                          accountsWithAccountType:accountType];
              
@@ -156,7 +160,7 @@
                  
                  NSMutableDictionary *parameters =
                  [[NSMutableDictionary alloc] init];
-                 [parameters setObject:@"20" forKey:@"count"];
+                 [parameters setObject:@"50" forKey:@"count"];
                  [parameters setObject:queryString forKey:@"q"];
                  [parameters setObject:aroundLocation forKey:@"geocode"];
                  [parameters setObject:@"1" forKey:@"include_entities"];
@@ -190,9 +194,11 @@
                   }];
              }
          } else {
-             // Handle failure to get account access
+             NSLog(@"Account handle error in Location Query Granted!");
          }
      }];
+    NSLog(@"Leaving Location Query Granted!");
+
 }
 
 - (void)getTweetsNearLocation:(NSString *)aroundLocation
@@ -206,7 +212,7 @@
      {
          if (granted == YES)
          {
-             //NSLog(@"Inside Location Granted!");
+             NSLog(@"Inside Location Granted!");
              NSArray *arrayOfAccounts = [account
                                          accountsWithAccountType:accountType];
              
@@ -220,7 +226,7 @@
                  
                  NSMutableDictionary *parameters =
                  [[NSMutableDictionary alloc] init];
-                 [parameters setObject:@"20" forKey:@"count"];
+                 [parameters setObject:@"50" forKey:@"count"];
                  [parameters setObject:@"at" forKey:@"q"];
                  [parameters setObject:aroundLocation forKey:@"geocode"];
                  [parameters setObject:@"1" forKey:@"include_entities"];
@@ -262,9 +268,11 @@
                   }];
              }
          } else {
-             // Handle failure to get account access
+             NSLog(@"Account handle error in Location Granted");
          }
      }];
+    NSLog(@"Leaving Location Granted!");
+
 }
 
 @end
